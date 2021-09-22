@@ -1,7 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-  background-color: red;
+  background-color: rgba(255, 228, 196, 0.705);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input {
+  outline: none;
+  border: none;
+  font-size: 1rem;
 }
 
 .body-color {
   color: blue;
+}
+
+.card {
+  margin: 10% auto;
+  max-width: 90vh;
+}
+
+.end-box {
+  border-top: 1px solid rgb(134, 134, 134);
 }

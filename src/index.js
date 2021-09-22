@@ -1,17 +1,26 @@
-import _ from 'lodash';
 import './style.css';
 
-const component = () => {
-  const element = document.createElement('div');
-  const btn = document.createElement('button');
+const element = document.getElementById('todos-list');
 
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = console.log("Print me");
-  element.classList.add('body-color');
-  element.appendChild(btn);
+const myTasks = [
+  { description: 'To buy veggies', index: 0, completed: false },
+  { description: 'To meet Erick', index: 1, completed: false },
+  { description: 'To complete Microverse Capstone', index: 2, completed: false },
+];
 
-  return element;
-}
+const addList = (todosList) => {
+  for (let i = 0; i < todosList.length; i += 1) {
+    const listItem = ` <div class="d-flex justify-content-between ps-3 pe-3 align-items-center">
+        <div class="d-flex">
+        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault${i}">
+        <div class="ps-3">${todosList[i].description}</div>
+        </div>
+        <i class="fas fa-ellipsis-v text-secondary" id=""></i>
+      </div>
+      <hr>`;
 
-document.body.appendChild(component());
+    element.innerHTML += listItem;
+  }
+};
+
+addList(myTasks);
