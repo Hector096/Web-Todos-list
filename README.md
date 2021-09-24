@@ -2,6 +2,11 @@
 
 > This is a powerful Todo list App to Manage tasks. Enjoy Watching!
 
+
+##Screenshots
+
+![screenshot](./assets/images/screenshot.PNG)
+
 ## Built With
 
 - HTML & CSS
