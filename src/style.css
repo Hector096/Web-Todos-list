@@ -34,3 +34,8 @@ input {
 .rotate {
   transform: rotate(360deg);
 }
+
+#clear-completed {
+  text-decoration: none;
+  cursor: pointer;
+}

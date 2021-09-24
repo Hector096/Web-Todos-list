@@ -18,9 +18,11 @@ export default class Task {
     const data = getData();
     const index = data.findIndex((item) => item.index === this.index);
     data.splice(index, 1);
-    for (let j = index; j < data.length; j += 1) {
-      data[j].index -= data[j].index;
-    }
+    let i = 1;
+    data.forEach((item) => {
+      item.index = i;
+      i += 1;
+    });
     saveData(data);
   }
 }
