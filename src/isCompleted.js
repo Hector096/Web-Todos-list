@@ -17,3 +17,9 @@ export const isEdit = (i, value) => {
   data[index].description = value;
   saveData(data);
 };
+
+export const clearCompleted = () => {
+  const data = getData();
+  const newData = data.filter((item) => item.completed !== true);
+  saveData(newData);
+};

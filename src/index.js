@@ -1,5 +1,5 @@
 import './style.css';
-import { isCompleted, isEdit } from './isCompleted';
+import { isCompleted, isEdit, clearCompleted } from './isCompleted';
 import Task from './dataModel';
 import { getData } from './localStorageHandler';
 
@@ -7,6 +7,7 @@ const element = document.getElementById('todos-list');
 const addInput = document.getElementById('add-input');
 const addTaskForm = document.getElementById('addTaskForm');
 const refreshBtn = document.getElementById('refresh');
+const clear = document.getElementById('clear-completed');
 
 const addList = (todosList) => {
   todosList.forEach((todoItem) => {
@@ -67,6 +68,17 @@ const addList = (todosList) => {
       menuButton.classList.add('fa-ellipsis-v');
       menuButton.classList.remove('far');
       menuButton.classList.remove('fa-trash-alt');
+
+      menuButton.addEventListener('click', () => {
+        const item = new Task(
+          todoItem.description,
+          todoItem.index,
+          todoItem.completed,
+        );
+        item.removeTask();
+        element.innerHTML = '';
+        addList(getData());
+      });
     });
 
     inputCheck.addEventListener('change', () => {
@@ -84,6 +96,12 @@ const addList = (todosList) => {
   });
 };
 
+clear.addEventListener('click', () => {
+  clearCompleted();
+  element.innerHTML = '';
+  addList(getData());
+});
+
 addTaskForm.addEventListener('submit', (e) => {
   e.preventDefault();
   if (addInput.value !== null) {
@@ -97,7 +115,9 @@ addTaskForm.addEventListener('submit', (e) => {
 
 refreshBtn.addEventListener('click', () => {
   refreshBtn.classList.toggle('rotate');
-  setTimeout(() => { window.location.reload(); }, 1000);
+  setTimeout(() => {
+    window.location.reload();
+  }, 1000);
 });
 
 addList(getData());
