@@ -3,7 +3,8 @@
 > This is a powerful Todo list App to Manage tasks. Enjoy Watching!
 
 ## Live Demo
-![link](https://hector096.github.io/Web-Todos-list/)
+
+- Demo Live: [@todo-list](https://hector096.github.io/Web-Todos-list/)
 
 ##Screenshots
 
