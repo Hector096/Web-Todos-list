@@ -12,6 +12,7 @@ export default class Task {
     const newTask = new Task(this.description, this.index, this.completed);
     data.push(newTask);
     saveData(data);
+    return newTask
   }
 
   removeTask() {
