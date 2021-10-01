@@ -1,30 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1633015636807" clover="3.2.0">
-  <project timestamp="1633015636808" name="All files">
-    <metrics statements="18" coveredstatements="5" conditionals="2" coveredconditionals="0" methods="7" coveredmethods="1" elements="27" coveredelements="6" complexity="0" loc="18" ncloc="18" packages="1" files="2" classes="2"/>
+<coverage generated="1633096187245" clover="3.2.0">
+  <project timestamp="1633096187245" name="All files">
+    <metrics statements="17" coveredstatements="17" conditionals="2" coveredconditionals="2" methods="7" coveredmethods="7" elements="26" coveredelements="26" complexity="0" loc="17" ncloc="17" packages="1" files="2" classes="2"/>
     <file name="dataModel.js" path="D:\Microverse\Web-Todos-list\src\dataModel.js">
-      <metrics statements="16" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="1"/>
-      <line num="5" count="1" type="stmt"/>
-      <line num="6" count="1" type="stmt"/>
-      <line num="7" count="1" type="stmt"/>
-      <line num="11" count="0" type="stmt"/>
-      <line num="12" count="0" type="stmt"/>
-      <line num="13" count="0" type="stmt"/>
-      <line num="14" count="0" type="stmt"/>
-      <line num="15" count="0" type="stmt"/>
-      <line num="19" count="0" type="stmt"/>
-      <line num="20" count="0" type="stmt"/>
-      <line num="21" count="0" type="stmt"/>
-      <line num="22" count="0" type="stmt"/>
-      <line num="23" count="0" type="stmt"/>
-      <line num="24" count="0" type="stmt"/>
-      <line num="25" count="0" type="stmt"/>
-      <line num="27" count="0" type="stmt"/>
+      <metrics statements="15" coveredstatements="15" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="5"/>
+      <line num="5" count="8" type="stmt"/>
+      <line num="6" count="8" type="stmt"/>
+      <line num="7" count="8" type="stmt"/>
+      <line num="11" count="3" type="stmt"/>
+      <line num="12" count="3" type="stmt"/>
+      <line num="13" count="3" type="stmt"/>
+      <line num="14" count="3" type="stmt"/>
+      <line num="18" count="2" type="stmt"/>
+      <line num="19" count="2" type="stmt"/>
+      <line num="20" count="2" type="stmt"/>
+      <line num="21" count="2" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="23" count="3" type="stmt"/>
+      <line num="24" count="3" type="stmt"/>
+      <line num="26" count="2" type="stmt"/>
     </file>
     <file name="localStorageHandler.js" path="D:\Microverse\Web-Todos-list\src\localStorageHandler.js">
-      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="0" methods="2" coveredmethods="0"/>
-      <line num="1" count="1" type="cond" truecount="0" falsecount="2"/>
-      <line num="3" count="1" type="stmt"/>
+      <metrics statements="2" coveredstatements="2" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+      <line num="1" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="3" count="5" type="stmt"/>
     </file>
   </project>
 </coverage>
