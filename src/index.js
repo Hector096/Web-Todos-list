@@ -115,7 +115,7 @@ clear.addEventListener('click', () => {
 
 addTaskForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (addInput.value !== '' || addInput.value !== null) {
+  if (addInput.value !== '') {
     const item = new Task(addInput.value.trim(), getData().length + 1, false);
     item.addNewTask();
     addInput.value = '';
