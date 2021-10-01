@@ -1,4 +1,4 @@
-import Task from "../dataModel";
+import Task from '../dataModel';
 
 class LocalStorageMock {
   constructor() {
@@ -24,37 +24,32 @@ class LocalStorageMock {
 
 global.localStorage = new LocalStorageMock();
 
-
-
-describe("Add item and Remove item", () => {
-  test("add item to the localstorage", () => {
-    let data = JSON.parse(localStorage.getItem('Tasks'))||[]
-    let task1 = new Task("to buy a new Phone",data.length+1, false);
-    task1.addNewTask()
-    let dataAfterAdding1 = JSON.parse(localStorage.getItem('Tasks'))
-    let task2 = new Task("to buy a new Milk",dataAfterAdding1.length+1, false);
-    task2.addNewTask()
-    let dataAfterAdding2 = JSON.parse(localStorage.getItem('Tasks'))
-    let task3 = new Task("to buy a new Android",dataAfterAdding2.length+1, false);
-    task3.addNewTask()
-    let dataAfterAdding = JSON.parse(localStorage.getItem('Tasks'))
+describe('Add item and Remove item', () => {
+  test('add item to the localstorage', () => {
+    const data = JSON.parse(localStorage.getItem('Tasks')) || [];
+    const task1 = new Task('to buy a new Phone', data.length + 1, false);
+    task1.addNewTask();
+    const dataAfterAdding1 = JSON.parse(localStorage.getItem('Tasks'));
+    const task2 = new Task('to buy a new Milk', dataAfterAdding1.length + 1, false);
+    task2.addNewTask();
+    const dataAfterAdding2 = JSON.parse(localStorage.getItem('Tasks'));
+    const task3 = new Task('to buy a new Android', dataAfterAdding2.length + 1, false);
+    task3.addNewTask();
+    const dataAfterAdding = JSON.parse(localStorage.getItem('Tasks'));
     expect(dataAfterAdding.length).toBe(3);
   });
 
-  test("remove item to the list", () => {
-    let task = new Task("to buy a new Phone",1, false);
-    task.removeTask()
-    let data = JSON.parse(localStorage.getItem('Tasks'))||[]
+  test('remove item to the list', () => {
+    const task = new Task('to buy a new Phone', 1, false);
+    task.removeTask();
+    const data = JSON.parse(localStorage.getItem('Tasks')) || [];
     expect(data.length).toBe(2);
   });
 
-
-  test('Checking the index value after removing the item',()=>{
-    let task = new Task("to buy a new Phone",1, false);
-    task.removeTask()
-    let data = JSON.parse(localStorage.getItem('Tasks'))||[]
-    expect(data[0].index).toBe(1)
-  })
+  test('Checking the index value after removing the item', () => {
+    const task = new Task('to buy a new Phone', 1, false);
+    task.removeTask();
+    const data = JSON.parse(localStorage.getItem('Tasks')) || [];
+    expect(data[0].index).toBe(1);
+  });
 });
-
-

@@ -49,13 +49,13 @@ const addList = (todosList) => {
     element.appendChild(hr);
 
     desc.addEventListener('change', () => {
-      if(desc.value !== ""){
+      if (desc.value !== '') {
         isEdit(todoItem.index, desc.value.trim());
         menuButton.classList.remove('fas');
         menuButton.classList.remove('fa-ellipsis-v');
         menuButton.classList.add('far');
         menuButton.classList.add('fa-trash-alt');
-      }else{
+      } else {
         const item = new Task(
           todoItem.description,
           todoItem.index,
@@ -115,7 +115,7 @@ clear.addEventListener('click', () => {
 
 addTaskForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  if (addInput.value !== '' || addInputvalue !== null) {
+  if (addInput.value !== '' || addInput.value !== null) {
     const item = new Task(addInput.value.trim(), getData().length + 1, false);
     item.addNewTask();
     addInput.value = '';
