@@ -8,7 +8,8 @@
     "watch": "webpack --watch",
     "start": "webpack serve --open",
     "build": "webpack",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -22,12 +23,14 @@
   },
   "homepage": "https://github.com/Hector096/Web-Todos-list#readme",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.15.4",
     "babel-eslint": "^10.1.0",
     "css-loader": "^6.3.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.24.2",
     "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.2.3",
     "style-loader": "^3.3.0",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
