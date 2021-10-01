@@ -16,6 +16,7 @@
 - Webpack
 - Javascript
 - Github
+- Jest
 
 ## Getting Started
 
@@ -28,8 +29,17 @@ You have a basic understanding of HTML,CSS,JavaScript, Webpack, Git and Github.
 ### Setup
 
 1. Clone the repository with *git clone: [Repository](https://github.com/Hector096/Web-Todos-list)  
-2. Run *index.html* in for browser.
+2.  Open your terminal and run `npm install` to install the node packages.
+3. Run `npm run start` too run the project.
 
+
+## Testing
+
+- Open the terminal
+  - On Windows => `Win + R`
+  - On Linux => `ctrl + alt + T`
+  - On Mac => `Control + Option + Shift + T`
+- Run `npm run test`
 
 ## Authors
 
