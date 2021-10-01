@@ -49,11 +49,22 @@ const addList = (todosList) => {
     element.appendChild(hr);
 
     desc.addEventListener('change', () => {
-      isEdit(todoItem.index, desc.value.trim());
-      menuButton.classList.remove('fas');
-      menuButton.classList.remove('fa-ellipsis-v');
-      menuButton.classList.add('far');
-      menuButton.classList.add('fa-trash-alt');
+      if(desc.value !== ""){
+        isEdit(todoItem.index, desc.value.trim());
+        menuButton.classList.remove('fas');
+        menuButton.classList.remove('fa-ellipsis-v');
+        menuButton.classList.add('far');
+        menuButton.classList.add('fa-trash-alt');
+      }else{
+        const item = new Task(
+          todoItem.description,
+          todoItem.index,
+          todoItem.completed,
+        );
+        item.removeTask();
+        element.innerHTML = '';
+        addList(getData());
+      }
     });
 
     desc.addEventListener('click', () => {
